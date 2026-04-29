@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --page-width: 1000px;
+  --header-height: 72px;
+  --error-color: #ef4444;
+  --font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  // --font-size-0: 1rem;
+  --font-size-1: 1rem;
+  --font-size-2: 1.4rem;
+  --font-size-3: 1.6rem;
+  --font-size-4: 1.8rem;
+  --font-size-5: 2rem;
+  --font-size-6: 2.2rem;
+  --font-size-7: 2.4rem;
+  --font-size-8: 2.6rem;
+  --font-size-9: 2.8rem;
+  --font-size-10: 3rem;
+
+  --font-weight-1: 100;
+  --font-weight-2: 200;
+  --font-weight-3: 300;
+  --font-weight-4: 400;
+  --font-weight-5: 500;
+  --font-weight-6: 600;
+
+  --space-25: 0.25rem;
+  --space-30: 0.3rem;
+  --space-40: 0.4rem;
+  --space-50: 0.5rem;
+  --space-75: 0.75rem;
+  --space-1: 1rem;
+  --space-2: 2rem;
+  --space-3: 3rem;
+  --space-4: 4rem;
+  --space-5: 5rem;
+  --space-6: 6rem;
+  --space-7: 7rem;
+  --space-8: 8rem;
+  --space-9: 9rem;
+  --space-10: 10rem;
+  --border-radius-24: 24px;
+  --border-radius-16: 16px;
+  --border-radius-12: 12px;
+  --border-radius-6: 6px;
+  --border-radius-8: 8px;
+  --border-radius-3: 3px;
+  --border-radius-2: 2px;
+  --transition-1: all 0.1s ease-in-out;
+}
+
+:root {
+  --color-1: #0f1720;
+  --color-2: #17232f;
+  --color-3: #f4efe6;
+  --color-3-60: rgba(244, 239, 230, 0.6);
+  --color-3-50: rgba(244, 239, 230, 0.5);
+  --color-3-40: rgba(244, 239, 230, 0.4);
+  --color-3-30: rgba(244, 239, 230, 0.3);
+  --color-3-20: rgba(244, 239, 230, 0.2);
+  --color-3-10: rgba(244, 239, 230, 0.1);
+}
+
+html[class="light"] {
+  // light theme
+  --color-1: #f7f3ea;
+  --color-2: #e8edf1;
+  --color-3: #20313f;
+  --color-3-60: rgba(32, 49, 63, 0.6);
+  --color-3-50: rgba(32, 49, 63, 0.5);
+  --color-3-20: rgba(32, 49, 63, 0.2);
+  --color-3-10: rgba(32, 49, 63, 0.1);
+
+  --font-weight-0: 100;
+  --font-weight-1: 200;
+  --font-weight-2: 300;
+  --font-weight-3: 400;
+  --font-weight-4: 500;
+  --font-weight-5: 600;
+}
+
+body,
+html {
+  background-color: var(--color-1);
+  padding: 0;
+  margin: 0;
+  scroll-padding-top: var(--header-height);
+  font-size: var(--font-size-0);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  -webkit-tap-highlight-color: transparent;
+  // -webkit-user-select: none;
+  // -khtml-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  // user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Remove Arrows/Spinners from Number Inputs
+//---------------------------------------------------
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+
+  /* border-radius: var(--border-radius-1); */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-2);
+  border-radius: var(--border-radius-12);
+
+  /* border-radius: var(--border-radius-1); */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color-4);
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: var(--color-1);
+  /* Not removed via appearance */
+  margin: 0;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: var(--color-1);
+  /* Not removed via appearance */
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#app {
+  position: relative;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 var(--space-1);
+}
+
+.page {
+  max-width: var(--page-width);
+  // padding: 0 var(--space-1);
+  margin-top: calc(67px + var(--space-2));
+  margin-bottom: calc(67px + var(--space-2));
+}
+
+.center-content-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: var(--page-width);
+  margin-top: calc(67px);
+  margin-bottom: calc(67px);
+  height: calc(90vh - 67px * 2);
+}
+
+.mobile {
+  display: none !important;
+}
+
+.helper-buttons {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+
+.final-root {
+  display: flex;
+  align-items: center;
+  gap: var(--space-75);
+  width: 100%;
+  padding: var(--space-1);
+  border: 1px solid var(--color-3-20);
+  border-radius: var(--border-radius-12);
+  background-color: var(--color-2);
+  color: var(--color-3);
+}
+
+.final-root span {
+  color: var(--color-3-60);
+}
+
+.final-root strong {
+  font-size: var(--font-size-2);
+}
+
+.method-graph {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+  margin-top: var(--space-1);
+  color: var(--color-3);
+}
+
+.method-graph svg {
+  width: 100%;
+  height: auto;
+}
+
+.method-graph rect {
+  fill: var(--color-2);
+  stroke: var(--color-3-20);
+}
+
+.method-graph .graph-axis {
+  stroke: var(--color-3);
+  stroke-width: 1.2;
+}
+
+.method-graph .graph-line {
+  fill: none;
+  stroke: #2fb7a4;
+  stroke-width: 2.5;
+}
+
+.method-graph .graph-root {
+  fill: #f26d5b;
+}
+
+.method-graph .graph-label {
+  fill: var(--color-3-60);
+  font-size: 14px;
+}
+
+// .Toastify {
+//   background-color: var(--color-2);
+//   color: var(--color-3);
+//   border-radius: var(--border-radius);
+// }
+// .Toastify__toast-theme--dark {
+//   background-color: var(--color-3) !important;
+//   color: var(--color-1) !important;
+//   // border: 1px solid var(--color-3-20) !important;
+//   // padding: space;
+// }
+
+@media only screen and (max-width: 600px) {
+  .mobile {
+    display: flex !important;
+  }
+  :root {
+    --page-width: 100%;
+    --border-radius: 5px;
+    font-size: 15px;
+    // padding: 15px;
+  }
+}

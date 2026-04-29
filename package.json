@@ -1,0 +1,29 @@
+{
+  "name": "numerical-methods-calculator",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:pages": "cross-env GITHUB_PAGES=true NEXT_PUBLIC_GITHUB_PAGES_REPO=numerecal2 next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@svgr/webpack": "8.1.0",
+    "animate.css": "4.1.1",
+    "aos": "2.3.4",
+    "mathjs": "^12.4.3",
+    "next": "14.2.5",
+    "next-themes": "0.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-toastify": "10.0.5",
+    "sass": "1.77.8",
+    "cross-env": "7.0.3"
+  },
+  "devDependencies": {
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.5"
+  }
+}

@@ -189,10 +189,7 @@
 .logo-icon {
     width: 110px;
     height: 110px;
-
-    html[class*="light"] & {
-        filter: invert(1);
-    }
+    object-fit: contain;
 }
 
 .landpage-title {

@@ -3,9 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
 
 // Assets
-import Logo from '../assets/svg/logo.svg';
+import mnaLogoDark from '../public/mna-logo-dark.png';
+import mnaLogoLight from '../public/mna-logo-light.png';
 import LightIcon from '../assets/svg/lightIcon';
 import DarkIcon from '../assets/svg/darkIcon';
 import SettingsIcon from '../assets/svg/settingsIcon';
@@ -53,12 +55,14 @@ const Header = () => {
     else setMode(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   }, [theme]);
 
+  const headerLogo = mode === 'dark' ? mnaLogoDark : mnaLogoLight;
+
   return (
     <div className="header">
       <div className="header-container">
         <Link href="/">
           <div className="logo">
-            <Logo />
+            <Image src={headerLogo} alt="MNA logo" width={70} height={38} className="header-logo-image" priority />
           </div>
         </Link>
         <div className="header-buttons">

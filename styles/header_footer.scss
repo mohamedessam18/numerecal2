@@ -28,6 +28,14 @@
             display: flex;
             padding: 0 var(--space-50);
 
+            .header-logo-image {
+                display: flex;
+                width: 70px;
+                height: auto;
+                object-fit: contain;
+                transition: var(--transition-1);
+            }
+
             svg {
                 display: flex;
                 transition: var(--transition-1);

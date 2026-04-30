@@ -29,6 +29,9 @@ const App = ({ Component, pageProps }) => {
         <title>Numerical Analysis Methods</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/me-logo-192.png" />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <XProvider>
         <ThemeProvider attribute="class" defaultTheme="light">
